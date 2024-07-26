@@ -18,10 +18,11 @@ public class Account {
 
     @Column(scale = 13, precision = 2)
     private BigDecimal balance;
-    @Column(scale = 13, precision = 2)
+
+    @Column(name = "additional_limit", scale = 13, precision = 2)
     private BigDecimal limit;
 
-
+    //métodos
     public Long getId() {
         return id;
     }
@@ -54,12 +55,10 @@ public class Account {
         this.agency = agency;
     }
 
+    public BigDecimal getLimit() {return limit;}
 
     public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = BigDecimal.valueOf(balance);
-    }
 }
