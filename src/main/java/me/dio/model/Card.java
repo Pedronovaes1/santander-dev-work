@@ -12,7 +12,7 @@ public class Card {
     @Column(unique = true, nullable = false)
     private String number;
 
-    @Column(scale = 13, precision = 2)
+    @Column(precision = 13, scale = 2)
     private double limit;
 
     public Long getId() {
